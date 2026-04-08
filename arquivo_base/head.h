@@ -3,13 +3,14 @@
 #include <stdbool.h>
 
 typedef struct no{
-    int info;
-    Tno *esq;
-    Tno *dir;
+    int key;
+    Tno *left;
+    Tno *right;
+    Tno *p;
 } Tno;
 
 typedef struct bimtree{
-    Tno* raiz;
+    Tno* root;
 } BimTree;
 
 BimTree* BT_create();
@@ -26,6 +27,7 @@ Tno* BT_max(Tno*);
 Tno* BT_min(Tno*);
 Tno* BT_sucessor(Tno*);
 
-bool 
+bool Tree_Delete(T, u,v);
+void Transplante(T, u, v);
 
 #endif
